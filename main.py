@@ -164,6 +164,7 @@ if __name__ == '__main__':
 
         if args.fp16:
             try:
+                
                 from apex.contrib.optimizers import FP16_Optimizer, FusedAdam
             except:
                 raise ImportError(
