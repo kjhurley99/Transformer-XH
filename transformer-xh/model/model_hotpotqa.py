@@ -10,8 +10,8 @@ class ModelHelper_Hotpot(ModelHelper):
     def __init__(self, node_encoder, args, bert_config, config_model):
         super(ModelHelper_Hotpot, self).__init__(node_encoder, args, bert_config, config_model)
         self.mrc_final_layer = nn.Linear(self.config.hidden_size, 2)
-        self.mrc_final_layer.apply(self.init_weights)
-    
+        # self.mrc_final_layer.apply(self.init_weights)
+        self.init_weights()
     
     def forward(self, batch, device):    
         ### Transformer-XH for node representations

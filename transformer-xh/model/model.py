@@ -209,7 +209,8 @@ class ModelHelper(BertPreTrainedModel):
         self.args = args
         self.node_dropout = nn.Dropout(self.config.hidden_dropout_prob)
         self.final_layer = nn.Linear(self.config.hidden_size, 1)
-        self.final_layer.apply(self.init_weights)
+        # self.final_layer.apply(self.init_weights)
+        self.init_weights()
 
     def forward(self, batch, device):
         pass
