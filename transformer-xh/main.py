@@ -173,7 +173,9 @@ if __name__ == '__main__':
             optimizer = FusedAdam(optimizer_grouped_parameters,
                                 lr=config["training"]["learning_rate"],
                                 bias_correction=False,
-                                max_grad_norm=1.0)
+                                # max_grad_norm=1.0
+                                  )
+            FusedAdam()
             if args.loss_scale == 0:
                 optimizer = FP16_Optimizer(optimizer, dynamic_loss_scale=True)
             else:
