@@ -175,7 +175,6 @@ if __name__ == '__main__':
                                 bias_correction=False,
                                 # max_grad_norm=1.0
                                   )
-            FusedAdam()
             if args.loss_scale == 0:
                 optimizer = FP16_Optimizer(optimizer, dynamic_loss_scale=True)
             else:
