@@ -4,4 +4,4 @@
 ### Hotpot QA Eval:
 #python transformer-xh/main.py --cf transformer-xh/configs/config_hotpot.json --test
 ### Hotpot QA Eval fp16:
-python transformer-xh/main.py --cf transformer-xh/configs/config_hotpot.json --fp16 --test
+python3 transformer-xh/main.py --cf transformer-xh/configs/config_hotpot.json --fp16 --test
