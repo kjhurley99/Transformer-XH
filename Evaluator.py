@@ -69,6 +69,7 @@ def evaluation_hotpot(model, eval_file, config, args):
             label_correct += 1
 
         pred_dict[batch[5][0]]={'node': index.item(), 'span': [start_pred, end_pred]}
+        print( batch )
     
     #### Generate prediction file for official eval
     graphs = dataset.data
@@ -102,6 +103,7 @@ def evaluation_hotpot(model, eval_file, config, args):
     logging.info("********* Node accuracy ************{}".format(accu))
     accu = span_correct / total
     logging.info("********* Span accuracy ************{}".format(accu))
+    print(final_pred)
     return accu, final_pred
 
     
